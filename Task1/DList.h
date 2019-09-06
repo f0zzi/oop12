@@ -222,9 +222,9 @@ public:
 		}
 		return tmp;
 	}
-	CDlist& operator*(const CDlist& second)
+	CDlist operator*(const CDlist& second)
 	{
-		Cdlist* result = new CDlist;//CDlist<T> result;
+		CDlist<T> result;
 		if (this->size != 0 && second.size != 0)
 		{
 			Node* one = this->first;
@@ -247,9 +247,5 @@ public:
 			}
 		}
 		return result;
-	}
-	~CDlist()
-	{
-		Clear();
 	}
 };
